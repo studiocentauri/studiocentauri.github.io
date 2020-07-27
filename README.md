@@ -1,0 +1,2 @@
+# studiocentauri.github.io
+Homepage
