@@ -9,6 +9,8 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 @import url(//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
 @import url(//fonts.googleapis.com/css?family=Volkhov:400italic);
+@import url(//fonts.googleapis.com/css?family=Raleway:700);
+
 /* var text-decoration */
 /*--
 	Common Css
@@ -23,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 h2 {
   font-size: 30px;
@@ -706,8 +708,8 @@ font header .navbar-default .navbar-nav li a:hover {
   display: inline-block;
 }
 .social-icons i {
-  color: #2C2C2C;
-  margin-right: 25px;
+  color: #f2ebe0;
+  margin-right: 0px;
   font-size: 25px;
 }
 .google-map {
@@ -787,6 +789,11 @@ footer p {
 footer a {
   color: #595959;
 }
+
+footer .fa {
+
+}
+
 footer .footer-manu {
   padding-bottom: 25px;
 }
