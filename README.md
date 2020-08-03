@@ -1,6 +1,6 @@
 # Studio Centauri
 
-
+Our website and blog
 
 ## Credits
 
