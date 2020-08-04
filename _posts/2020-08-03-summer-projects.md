@@ -16,9 +16,11 @@ The Science and Technology Council's summer camp was a significant step in this 
 
 ![skyfall](/img/posts/skyfall.jpg)
 
-**Infected** is a platformer shooter. Research into a bioweapon has thrown the world into chaos and unleashed a disease with no cure. You're trapped inside the very same lab where it all started, trying to survive.
+**Infected** is a platformer shooter. Research into a bioweapon has thrown the world into chaos and unleashed a disease with no cure. You're trapped inside the very same lab where it all started. Annihilate the virus as a hero and save the world!
 
-You can check out both of these games on our itch page.
+![infected](/img/posts/infected.png)
+
+You can check out both of these games on our [itch page](https://studiocentauri.itch.io/).
 
 ## Community
 
