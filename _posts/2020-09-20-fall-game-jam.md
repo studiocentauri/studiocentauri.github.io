@@ -6,7 +6,7 @@ date: 2020-09-20
 author: "Siddhartha Pratap Singh"
 ---
 
-*We recently conducted the Fall Game Jam. This article presents Siddharth's experience and design choices making his game, The Tests, which you can play [here](https://kingcrimson1112.itch.io/the-tests).*
+*We recently conducted the Fall Game Jam. This article presents Siddhartha's experience and design choices making his game, The Tests, which you can play [here](https://kingcrimson1112.itch.io/the-tests).*
 
 ## Concept
 
