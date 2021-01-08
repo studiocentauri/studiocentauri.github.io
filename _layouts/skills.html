@@ -2,8 +2,32 @@
 layout: default
 ---
 
-<h1>
-    Learn this.
-</h1>
-
-{{ content }}
+<div class="skills-bg">
+    <div class="container-fluid">
+        <div class="row align-items-start">
+            <div class="col-md-8">
+                <div class="skills-left-bg">
+                    <span
+                        ><a class="link-secondary" href="javascript:history.back()">
+                            BACK
+                        </a></span
+                    >
+                    {{ content }}
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img
+                    id="kaka"
+                    class="rounded-circle img-thumbnail mx-auto d-block"
+                    src="{{ site.baseurl }}/img/kaka.png"
+                    alt="kaka"
+                />
+                <div class="skills-right-bg">
+                    <p class="lead">
+                        {{ page.kaka }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -4,39 +4,93 @@
  *
  */
 
- .italic {
-   font-style: italic;
- }
-
- .bold {
-   font-weight: bold;
- }
-
- .center-text {
-   text-align: center;
- }
-
-.post-area {
-  padding: 40px;
-  width: 60%;
-  margin: 0 auto;
-  min-height: 150px;
-  background-color: white;
-  border-bottom: 1px dotted #ddd;
+.italic {
+    font-style: italic;
 }
 
-.post-area a:link, .post-area a:visited {
-  font-size: 30px;
-  color: #333;
+.bold {
+    font-weight: bold;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.post-area {
+    padding: 40px;
+    width: 60%;
+    margin: 0 auto;
+    min-height: 150px;
+    background-color: white;
+    border-bottom: 1px dotted #ddd;
+}
+
+.post-area a:link,
+.post-area a:visited {
+    font-size: 30px;
+    color: #333;
 }
 
 .post-area a:hover {
-  color: #0D0017;
+    color: #0d0017;
 }
-
 
 /*******************************************
  * Learn
  *******************************************/
 
+div.skills-bg {
+    background-color: #f6f6f6;
+    padding: 2em;
+    width: 100%;
+    height: auto;
+}
 
+div.skills-bg .container-fluid {
+    margin: 0;
+    font-family: 'Oswald', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #262626;
+}
+
+div.skills-bg .row {
+    margin: 2em 0;
+}
+
+div.skills-left-bg {
+    height: 700px;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 17px;
+    padding: 3em;
+}
+
+div.skills-right-bg {
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 17px;
+    padding: 1.5em;
+    margin-top: -5em;
+}
+
+div.skills-right-bg p {
+    margin-top: 4em;
+    text-align: center;
+}
+
+img#kaka {
+    width: 10em;
+    margin-top: 5em;
+}
+
+div#skill-detail-content {
+    color: #636363;
+    line-height: 2em;
+    font-size: large;
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+div#skill-detail-heading {
+    margin: 2em 0;
+}
