@@ -94,3 +94,17 @@ div#skill-detail-content {
 div#skill-detail-heading {
     margin: 2em 0;
 }
+
+div.tree-node {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background: #f7f7f7;
+    color: #262626;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+div.tree-node p {
+    margin: auto;
+    font-size: larger;
+}
