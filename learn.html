@@ -3,10 +3,66 @@ layout: default
 permalink: /learn/
 ---
 
-<h1>
-    Learn this.
-</h1>
-
-<a href="{{ site.baseurl }}/learn/artist.html">Artist</a><br>
-<a href="{{ site.baseurl }}/learn/programmer.html">Programmer</a><br>
-<a href="{{ site.baseurl }}/learn/designer.html">Designer</a><br>
+<div class="learn-page">
+    <section>
+        <div
+            class="min-vh-100 container-fluid p-5 d-flex flex-row align-items-center learn-header-bg"
+        >
+            <h1
+                class="text-light display-1 fw-bolder text-decoration-underline"
+            >
+                GET READY FOR <br />
+                THE BATTLE
+            </h1>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid p-5">
+            <div class="row min-vh-100 gx-5">
+                <div class="col">
+                    <h1 class="display-3 fw-bold">THE WORLD NEEDS YOU</h1>
+                    <p class="fs-4 text-secondary mt-5 learn-story-content">
+                        Everything changed when the fire nation attacked.We need
+                        you to learn gamedev and fight the evil corporation.
+                    </p>
+                </div>
+                <div class="col learn-story-bg"></div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid min-vh-100 p-5">
+            <div class="row">
+                <div class="col">
+                    <h1
+                        class="display-3 fw-bold mx-auto"
+                        style="width: max-content"
+                    >
+                        WHO'S SIDE ARE YOU ON?
+                    </h1>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col">
+                    {% include character-select.html name="artist" %}
+                </div>
+                <div class="col">
+                    {% include character-select.html name="designer" %}
+                </div>
+                <div class="col">
+                    {% include character-select.html name="programmer" %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid p-5 mb-5">
+            <h1
+                class="display-3 fw-bold mx-auto text-uppercase"
+                style="width: max-content"
+            >
+                begin your adventure!
+            </h1>
+        </div>
+    </section>
+</div>
