@@ -91,10 +91,6 @@ header .navbar {
     display: flex;
     align-content: center;
 }
-header .logo {
-    width: 70px;
-    height: 70px;
-}
 header .navbar-default {
     background: none;
     border: 0px;
