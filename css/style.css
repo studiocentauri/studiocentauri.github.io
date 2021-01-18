@@ -85,14 +85,18 @@ img#kaka {
 
 div#skill-detail-content {
     color: #636363;
-    line-height: 2em;
-    font-size: large;
-    font-style: normal;
-    font-weight: normal;
+    line-height: 1.5em;
+    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri,
+        "Trebuchet MS", sans-serif;
 }
 
 div#skill-detail-heading {
     margin: 2em 0;
+}
+
+div#skill-detail-heading h1 {
+    font-family: "Oswald", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 div.tree-node {
