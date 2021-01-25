@@ -5,34 +5,34 @@
  */
 
 .italic {
-    font-style: italic;
+  font-style: italic;
 }
 
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .center-text {
-    text-align: center;
+  text-align: center;
 }
 
 .post-area {
-    padding: 40px;
-    width: 60%;
-    margin: 0 auto;
-    min-height: 150px;
-    background-color: white;
-    border-bottom: 1px dotted #ddd;
+  padding: 40px;
+  width: 60%;
+  margin: 0 auto;
+  min-height: 150px;
+  background-color: white;
+  border-bottom: 1px dotted #ddd;
 }
 
 .post-area a:link,
 .post-area a:visited {
-    font-size: 30px;
-    color: #333;
+  font-size: 30px;
+  color: #333;
 }
 
 .post-area a:hover {
-    color: #0d0017;
+  color: #0d0017;
 }
 
 /*******************************************
@@ -40,106 +40,137 @@
  *******************************************/
 
 div.skills-bg {
-    background-color: #f6f6f6;
-    padding: 2em;
-    width: 100%;
-    height: auto;
+  background-color: #f6f6f6;
+  padding: 2em;
+  width: 100%;
+  height: auto;
 }
 
 div.skills-bg .container-fluid {
-    margin: 0;
-    font-family: "Oswald", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    color: #262626;
+  margin: 0;
+  color: #262626;
 }
 
 div.skills-bg .row {
-    margin: 2em 0;
+  margin: 2em 0;
 }
 
 div.skills-left-bg {
-    height: 700px;
-    background-color: white;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 17px;
-    padding: 3em;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 17px;
+  padding: 3em;
+}
+
+div.skills-left-bg ul {
+  list-style-type: circle;
+  margin-bottom: 2em;
+}
+
+div.skills-left-bg li {
+  margin-left: 2em;
+  margin-bottom: 1em;
+  font-size: 15px;
+  color: #464646;
+  font-family: "Open Sans";
+}
+
+div.skills-left-bg p {
+  margin-bottom: 2em;
+  color: #464646;
+  font-family: "Open Sans";
+}
+
+div.skills-left-bg #back-button {
+  font-family: "Oswald", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 div.skills-right-bg {
-    background-color: white;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 17px;
-    padding: 1.5em;
-    margin-top: -5em;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 17px;
+  padding: 1.5em;
+  margin-top: -5em;
 }
 
 div.skills-right-bg p {
-    margin-top: 4em;
-    text-align: center;
+  margin-top: 4em;
+  text-align: center;
+  font-family: "Open Sans";
 }
 
 img#kaka {
-    width: 10em;
-    margin-top: 5em;
+  width: 10em;
+  margin-top: 5em;
 }
 
-div#skill-detail-content {
-    color: #636363;
-    line-height: 1.5em;
-    font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri,
-        "Trebuchet MS", sans-serif;
+div#skill-detail-content h1,
+div#skill-detail-content h2,
+div#skill-detail-content h3,
+div#skill-detail-content h4,
+div#skill-detail-content h5,
+div#skill-detail-content h6 {
+  font-family: 'Oswald';
+}
+
+div#skill-detail-content img {
+  max-width: 100%;
+}
+
+div#skill-detail-content pre {
+  background-color: #f8f9fa;
+  padding: 1.5em;
 }
 
 div#skill-detail-heading {
-    margin: 2em 0;
+  margin: 2em 0;
 }
 
-div#skill-detail-heading h1 {
-    font-family: "Oswald", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
 
 div.tree-node {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    background: #f7f7f7;
-    color: #262626;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background: #f7f7f7;
+  color: #262626;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 div.tree-node p {
-    margin: auto;
-    font-size: larger;
+  margin: auto;
+  font-size: larger;
+  font-family: "Oswald", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 div.learn-page h1,
 div.learn-page p,
 .character-choose-btn h3 {
-    font-family: "Oswald", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Oswald", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 div.learn-header-bg {
-    background: url(https://source.unsplash.com/Q1p7bh3SHj8/640x425);
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url(https://source.unsplash.com/Q1p7bh3SHj8/640x425);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 div.learn-story-bg {
-    background: url(https://source.unsplash.com/WV7ZMt3RjsQ/640x975);
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url(https://source.unsplash.com/WV7ZMt3RjsQ/640x975);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 div.character-bg {
-    background-color: #636363;
+  background-color: #636363;
 }
 
 .character-choose-btn {
-    background: #37b9f0;
-    height: 4.5em;
-    width: 9em;
-    color: #ffffff;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #37b9f0;
+  height: 4.5em;
+  width: 9em;
+  color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
