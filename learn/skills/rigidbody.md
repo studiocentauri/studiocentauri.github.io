@@ -17,6 +17,6 @@ A brief overview of the working of a `Physics Engine` is given in the following 
 
 ![Physics Engine Overview](/img/learn/physics_engine.png)
 
-Rigidbodies have a number of properties associated with them which impact on how the GameObjects will be reacting to various forces and motions.
+Rigidbodies have a number of properties associated with them which impact on how the GameObjects will be reacting to various forces and motions
 
 
