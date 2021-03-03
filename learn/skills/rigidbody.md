@@ -19,6 +19,8 @@ A brief overview of the working of a `Physics Engine` is given in the following 
 
 Rigidbodies have a number of properties associated with them which impact on how the GameObjects will be reacting to various forces and motions
 
+<!---
+
 ## Godot Implementation
 
 In Godot, we can develop both 2D and 3D games. Meaning of the term RigiBody does not change in them but the implementation may differ. 
@@ -62,7 +64,42 @@ func _integrate_forces(state):
     ...
     
 ```
+-->
 
-#### 3D Games
+## Body Type (Modes)
+
+Rigidbody is attached to a GameObject so as to have the impact of Physics on that GameObject. In a game scene, one may want a GameObject to behave in various ways and in terms of how Physics have impact on them, there are modes that are needed to be defined for a Rigidbody. 
+
+* __StaticBody__ bodies are not controlled by the `Physics Engine`. They get involved in collisions but do not move in response to them, but can impart motion to the colliding bodies. 
+
+* __KinematicBody__ bodies are also not controlled by the `Physics Engine`. They can detect collision and respond accordingly and also they are required to be controlled by the user via a code, as they do not have impact of Physics on them. 
+
+* __RigidBody( Dynamic Body)__ bodies are directly controlled by the `Physics Engine` and are very less dependent on the user controlling them. The `Physics Engine` control them on the basis of the set of properties defined associated with them like mass, drag etc. In one sense, one may interpret a Rigidbody as a ragdoll which is not under the user's control but is impacted by the Physics of the current game scene. This mode( or body type) is default to a Rigidbody component. 
 
 
+![Die Brick](/img/learn/brick.png)
+
+In the above scene of a game (in which we have to break all the bricks using that ball), the bricks and walls (not visible in the image) are static bodies, the paddle is a kinematic body and the ball is a rigid (dynamic) body. They all have some scripts(codes) associated with them so as to make the game more interactive. 
+
+
+## Implementation 
+
+For a proper implementaion of a rigibody, one needs to add/remove various properties assoiciated with it. Now to alter this property, one may either do it directly with the help of a game engine or one may write a code for this. Usually codes are preferred for detecting collisions, simulating transistions from one state to another and fixing some parameters. Altering the properties of a rigidbody can directly be done from the game engine interface. 
+
+![Ball Script](/img/learn/ball_script.png)  |  ![Paddle Script](/img/learn/paddle_script.png)  | 
+
+
+The above 2 screenshots show the scripts associated with the ball and the paddle in the Die Brick game respectively. The __Scripting__ tells the game engine what to do when something happens. In the case of Kinematic bodies, scripting is very much important as the user is needed to control them and thus it is needed to instruct the game engine how the user will be giving input to the Kinematic body. 
+
+
+#### References 
+
+__Godot__ :  
+* [RigidBody - Godot Documentation](https://docs.godotengine.org/en/stable/tutorials/physics/rigid_body.html)
+* [RigidBody2D - Godot Documentation](https://docs.godotengine.org/en/stable/tutorials/physics/physics_introduction.html#rigidbody2d)
+
+__Unity__ : 
+* [RigidBody - Unity Documentation](https://docs.unity3d.com/Manual/RigidbodiesOverview.html) 
+* [RigidBody2D - Unity Documentation](https://docs.unity3d.com/Manual/class-Rigidbody2D.html)
+
+<!--- asfasd -->
