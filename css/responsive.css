@@ -44,7 +44,7 @@ px      68    160    252    344    436    528    620    712    */
   /*--
 	footer Start 
 --*/
-  footer .navbar {
+  /* footer .navbar {
     margin-bottom: 0px;
     border: 0px;
     min-height: 40px;
@@ -60,7 +60,7 @@ px      68    160    252    344    436    528    620    712    */
   }
   footer .navbar-default .navbar-nav li a:hover {
     color: #000;
-  }
+  } */
   /*---------------------------------------------
 					Index Close 
 -----------------------------------------------*/

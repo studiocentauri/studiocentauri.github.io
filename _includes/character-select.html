@@ -1,12 +1,9 @@
-<div class="pt-5 d-flex flex-column character-bg" style="height: 40em">
-    <h1 class="mx-auto text-light fw-bold" style="width: max-content">
-        {{ include.name | upcase }}
-    </h1>
-    <div class="flex-grow-1"></div>
-    <a
-        href="{{ site.baseurl }}/learn/{{ include.name }}.html"
-        class="btn btn-primary mx-auto mb-5 rounded-pill d-flex character-choose-btn"
-    >
-        <h3 class="fw-bolder m-auto text-uppercase">choose</h3>
-    </a>
-</div>
+<a
+  class="d-block min-vh-100"
+  href="{{ site.baseurl }}/learn/{{ include.name }}.html"
+  style="
+    background-image: url('https://source.unsplash.com/user/nasa/300x600');
+  "
+>
+  <h1 class="mx-auto text-dark">{{ include.name | upcase }}</h1>
+</a>

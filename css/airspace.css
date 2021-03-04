@@ -732,7 +732,7 @@ font header .navbar-default .navbar-nav li a:hover {
     width: 20px;
 }
 .social-icons {
-    margin-top: 40px;
+    margin-bottom: 10px;
 }
 .social-icons li {
     display: inline-block;
@@ -809,7 +809,7 @@ font header .navbar-default .navbar-nav li a:hover {
 /*--
 	footer Start
 --*/
-footer {
+/* footer {
     background: #000;
     text-align: center;
     padding-top: 48px;
@@ -847,4 +847,4 @@ footer .footer-manu ul li a {
 
 footer .footer-manu ul li a:hover {
     color: #f2ebe0;
-}
+} */
