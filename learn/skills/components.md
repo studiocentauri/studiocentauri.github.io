@@ -138,7 +138,7 @@ class PlayerInputSystem {
 ```
 
 Now when the engine detects a keyboard input, it will fire the `KeyboardEvent`. This event will be handled by `OnKeyboardInput` 
-from the `PlayerInputSystem`. This handler with iterate through each active entity in the world that has both `Input` and 
+from the `PlayerInputSystem`. This handler will iterate through each active entity in the world that has both `Input` and 
 `Position` components, modifying their position components as required. Note that the tree entity will be skipped, as it has only 
 `Position`.
 
