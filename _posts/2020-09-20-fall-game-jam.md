@@ -4,6 +4,7 @@ title: Fall Game Jam Highlights - The Tests
 subtitle: "A quick review of the design and the creation process"
 date: 2020-09-20
 author: "Siddhartha Pratap Singh"
+# header: "/img/kaka.png"
 ---
 
 *We recently conducted the Fall Game Jam. This article presents Siddhartha's experience and design choices making his game, The Tests, which you can play [here](https://kingcrimson1112.itch.io/the-tests).*

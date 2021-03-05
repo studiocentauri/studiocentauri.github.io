@@ -17,35 +17,10 @@
 /*--
 	Common Css
 --*/
-body {
-    font-family: "Open Sans", sans-serif;
-    -webkit-font-smoothing: antialiased;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Raleway", sans-serif;
-}
-h2 {
-    font-size: 30px;
-    font-weight: 400;
-}
-h3 {
-    font-size: 28px;
-    font-weight: 300;
-}
 p {
-    font-size: 15px;
-    line-height: 28px;
+    margin-bottom: 2em;
 }
-ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
+
 a,
 a:active,
 a:focus,
@@ -159,10 +134,14 @@ font header .navbar-default .navbar-nav li a:hover {
 --*/
 .post {
     display: flex;
+    background-color: #f6f6f6;
 }
 
 #intro .container {
     width: auto;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 17px;
 }
 
 #intro {
@@ -170,34 +149,15 @@ font header .navbar-default .navbar-nav li a:hover {
     width: 70%;
     margin: 0 auto;
 }
-#intro .block {
-    padding: 3em;
-}
 
-#intro .block h1 {
-    text-align: center;
-}
-
-#intro .block h2 {
-    padding-top: 35px;
-    line-height: 27px;
-    margin: 0;
-}
-#intro .block p {
-    color: #313030;
-    padding-top: 20px;
-}
-#intro .block img {
+#intro img {
     width: 100%;
+    max-width: 100%;
 }
-#intro .section-title {
-    margin-bottom: 0px;
-}
-#intro .section-title p {
-    padding-top: 20px;
-}
-#intro .post-info-wrapper {
-    text-align: center;
+
+#intro pre {
+    background-color: #f8f9fa;
+    padding: 1.5em;
 }
 
 /*--

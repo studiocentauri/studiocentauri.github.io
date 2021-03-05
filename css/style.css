@@ -65,7 +65,8 @@ div.skills-bg .row {
 
 div.skills-left-bg {
   background-color: white;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid #e6e6e6;
+  /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); */
   border-radius: 17px;
   padding: 3em;
 }
@@ -96,7 +97,8 @@ div.skills-left-bg #back-button {
 
 div.skills-right-bg {
   background-color: white;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); */
+  border: 1px solid #e6e6e6;
   border-radius: 17px;
   padding: 1.5em;
   margin-top: -5em;
@@ -112,29 +114,6 @@ img#kaka {
   width: 10em;
   margin-top: 5em;
 }
-
-div#skill-detail-content h1,
-div#skill-detail-content h2,
-div#skill-detail-content h3,
-div#skill-detail-content h4,
-div#skill-detail-content h5,
-div#skill-detail-content h6 {
-  font-family: 'Oswald';
-}
-
-div#skill-detail-content img {
-  max-width: 100%;
-}
-
-div#skill-detail-content pre {
-  background-color: #f8f9fa;
-  padding: 1.5em;
-}
-
-div#skill-detail-heading {
-  margin: 2em 0;
-}
-
 
 div.tree-node {
   height: 100%;
