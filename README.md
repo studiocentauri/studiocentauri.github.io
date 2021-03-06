@@ -1,5 +1,7 @@
 # Studio Centauri
 
+<a href="https://simpleanalytics.com/studiocentauri.github.io?utm_source=studiocentauri.github.io&utm_content=badge" referrerpolicy="origin" target="_blank"><img src="https://simpleanalyticsbadge.com/studiocentauri.github.io?mode=dark" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous" /></a>
+
 Our website and blog
 
 ## Credits
