@@ -3,180 +3,134 @@ layout: skill-details
 title: "Prefabs"
 ---
 
-As the scale of your game increases, it becomes more and more difficult to track all the `Objects` or `Entities` being used. There may also be situations where you need you multiple copies of a same `Object`. Example:- Coins in a Level,Bullets fired from a Gun,etc. One solution to these problems is to use `Prefabs`.
+As the scale of your game increases, it becomes more and more difficult to track all the objects or entities being used. There may also be situations where you need multiple copies of the same object. For instance, coins in a level, bullets fired from a gun, etc. One solution to this problem is to use `Prefabs`.
 
 ### Overview
-Prefabs can be understood as templates or blueprints of a `Object` that can be used in other parts of a game. This template is stored on your System as an `Asset` file which can later be used wherever required.
 
-Prefabs greatly improve the game development process by speeding up Development time and helps in Debugging. To further explain this process lets take the exams of Coins in a game. Lets say you have a Game Level where you need to place 20 coins throughout the level. Your initial approach would be to:
-1. Create a Coin Objects
-2. Make Multiple Copies of that Object
+Prefabs can be understood as templates or blueprints of a `GameObject` that can be used in other parts of the game. This template is stored in your project as an _asset file_ which can later be used wherever required.
+
+Prefabs greatly improve the game development process by speeding up development and make debugging simpler. To understand their usage, consider coins (or any pickup) in a game. Let's say you need to place 20 coins in level. Your initial approach would be to
+
+1. Create a `Coin` object
+2. Make multiple copies of that object
 3. Place them throughout the level
 
-Now if some situation arrives like you need to change the color of the Coin, you would need to individually change the color of every coin Object in your Level. This process can be alleviated by using Prefabs. Now your approach would be:
-1. Create a Coin Object
-2. Save it as a Prefab
-3. Place the Prefab throughout the Scene
+After you've done this, you realize that you want to change the color of each coin. Because we simply made copies, the color of each coin would have to be manually updated. This process can be bypassed using _prefabs_. Now your approach would be
 
-Now if you want to change the color of the Coin, you only need to change it in the Coin Prefab Asset file. Making this change in the Asset would automatically translate to all the Instances of the Prefab.Thus the color of the Coin would change in all the Coins.
+1. Create a `Coin` object
+2. Save it as a prefab
+3. Place the prefab throughout the scene
 
-Prefabs can also be helpful in Debugging your Game. When you want to apply a Patch or Fix a Bug which affects some Objects you only need to apply it to the Prefab Assets instead of all the Objects. This new fix would be automatically available to all the Instances. 
+Each coin now is an _instance_ of the prefab. This means that if you change the color in the coin prefab asset, every instance placed in the level would automatically use the new color. Because of the same reasons, prefabs can be helpful while debugging your game. If there's a bug that's affecting all coins, chances are that fixing it in the prefab will fix it for all coins in the scene. It is clear now that prefabs provide a powerful mechanism to allow reusing content.
 
-These `Prefab` Asset files can be used in a Game in multiple ways:-
-- Creation and Editing of Prefabs
-- Manual Placement in Scenes
-- Initialisation during Runtime
-- Overriding Prefab Data
-- Create Prefab Variants
+### Common Usage
 
-### Creation and Editing of Prefabs
-Prefab creation is a `Engine` process. The end result is same in all cases with the Creation of an Asset file where all the data is stored. The Prefabs consists of:-
-- All the Components of an Object
-- All the Child Objects and their Components
-- All the data fields related to these Components
+#### Creating and Editing Prefabs
 
-This Prefab can later be edited as based on the User needs. This is done in a `Prefab` editor in `Unity` or a `Scene` editor in `Godot`.
+The game engine's UI will allow users to create prefab assets. As mentioned earlier, these contain all the information necessary to create a `GameObject` of a particular type, namely
 
+1. All components of the object
+2. All child objects and their components
+3. All data fields related to these components
 
-### Manual Placement in Scenes
-Prefabs can be manually placed in your scenes to be used.(Ex- Placing coins throughout a Map) This is done in the Engine Editor by placing the Prefab in your Scene and Making Copies of them as you see fit.
+The second point above describes how `GameObjects` can be nested. For example, you can create a `Gun` prefab that will be used by both `Player` and `Enemy` prefabs. The bonus content below describes this situation in more detail.
 
-### Initialisation during Runtime
-Prefabs can be intialised in during Runtime based on user Input or Some Game Logic.
-(Ex- Bullets initialised when a Gun is Fired)
+#### Manual Placement in Scenes
 
-Lets take two examples of Prefab Initialisation.These are explained in context of `Unity` engine.
-- Bullet being Fired when Space is Pressed
+Prefabs can be manually placed in your scenes to be used. This is what we did when we placed coins on the map. This is done in the engine's level editor UI usually by dragging the asset into the scene, moving and duplicating as you see fit.
+
+#### Initialization During Runtime
+
+Prefabs can be created dynamically as your game runs based on user input or some other event (the `Bullet` prefab is spawned when a gun is fired). Let's take two examples
+
+- A bullet is fired when `Space` is pressed
+
 ```cs
-GameObject bulletObject; // Stores Bullet Prefab Reference
+GameObject bulletObject; // Stores a reference to the bullet prefab asset
 
-void Update()
-{
-  ...
-  // Checks if Space Key is Just Pressed down
-  if(Input.GetKeyDown(KeyCode.Space))
-  {
-    // Spawns a bulletObject as (1,1,1)
-    Initialise(bulletObject, Vector3(1,1,1));
-  }
-  ...
+void Update() {
+    // Checks if Space Key is Just Pressed down
+    if(Input.GetKeyDown(KeyCode.Space)) {
+        // Spawns a bulletObject at the location (1, 1, 1)
+        Initialize(bulletObject, Vector3(1, 1, 1));
+    }
 }
 ```
-- Spawn a Enemy at a Random Position at Regular Intervals
+
+- Spawn an enemy at a random position at regular intervals
 
 ```cs
-GameObject enemyObject; //Stores Enemy Prefab Reference
+GameObject enemyObject; // Stores enemy prefab reference
 
-void Update()
-{
-  ...
-  // Calculate Time
-  float timeLeft = GetTimeLeft();
-  // Checks if no time is left
-  if(timeLeft<=0)
-  {
-    // Get Random Spawn Position
-    Vector3 spawnPosition = GetRandomPosition();
-    // Spawns Enemy at said Random Position
-    Initialise(enemyObject, spawnPosition);
-    // Reset timer
-    timeLeft = ResetTimer();
-  }
-  ...
+void Update() {
+    // Calculate time left to wait
+    float timeLeft = GetTimeLeft();
+
+    // Spawn if the wait is over
+    if(timeLeft <= 0) {
+        Vector3 spawnPosition = GetRandomPosition(); // Get Random Spawn Position
+        Initialize(enemyObject, spawnPosition); // Spawns Enemy at said Random Position
+        timeLeft = ResetTimer(); // Reset the timer, start the waiting period again
+    }
 }
 ```
 
 ### Overriding Prefab Data
-All the instances of a Prefab have the same properties and component values as the Original Asset. You can also change them to suit your own needs. By overriding some value in an Instance you define that value as different.
-- Lets take a Example of a Sword as :-
 
-|     Item     |  Value   |
-|--------------|----------|
-| Sword Prefab | Attack=5 |
-| Instance 1   | Attack=5 |
-| Instance 2   | Attack=5 | 
+All instances of the prefab have the same properties as configured in the original asset. We can also tweak these values per-instance if needed. By *overriding* a value in an instance you indicate that value to be different. Consider a situation where you're implementing a sword, with an `Attack` parameter initially set to 5 (figure a).
 
-- If we change the Attack value in the Prefab to 6, the value would change as:- 
+![sword](/img/learn/prefabs_sword.png)
 
-|     Item     |  Value   |
-|--------------|----------|
-| Sword Prefab | Attack=6 |
-| Instance 1   | Attack=6 |
-| Instance 2   | Attack=6 |
+This sword is shared by multiple characters in your game, but you want to give one of them a slight advantage. Changing the prefab asset will change the parameter for all instances (figure b). What we need to do instead is to override the parameter for instance 1 (figure c). Chaning the prefab now will affect all instances *except* instance 1 (figure d).
 
-- Now if we override the attack value in `Instance 1` to 8 we get values as:-
+#### Prefab Variants
 
-|     Item     |  Value   |
-|--------------|----------|
-| Sword Prefab | Attack=6 |
-| Instance 1   | Attack=8 |
-| Instance 2   | Attack=6 |
+Overriding works well when we have a small number of objects to work with. If the number of objects increases, using a prefab variant is much simpler. To understand this, lets take the example of a healing potion.
 
-- If we change the attack value to 10 in the Prefab,we get values as:-
-
-|     Item     |  Value    |
-|--------------|-----------|
-| Sword Prefab | Attack=10 |
-| Instance 1   | Attack=8  |
-| Instance 2   | Attack=10 |
-
-- Thus the overriden Instance's value would no longer change with the Prefab. This can be fixed by reverting the changed field. Thus the values would finally be:-
-
-|     Item     |  Value    |
-|--------------|-----------|
-| Sword Prefab | Attack=10 |
-| Instance 1   | Attack=10 |
-| Instance 2   | Attack=10 |
-
-
-### Create Prefab Variants
-Prefab Overriding works well when you have a small number of Objects to work with. If the number of Objects increase, using Prefab Variants would provide better results. To understand this, lets take the example of a `Health Potion`.
-- A `Health Potion` heals the user by a certain amount when used.
+- A `HealthPotion` heals the user by a certain amount when used.
 - You can have Multiple Types of Prefabs as:
   - Small Potion (heals 5 HP)
   - Normal Potion (heals 15 HP)
   - Large Potion (heals 50 HP)
-- All of these items have the same logic with parameter changes. Also all of these can also have multiple instances in multiple parts of the Game
-- Thus they can be used as:
-  - A Health Potion Object saved as Prefab
-  - 3 Prefab Variants of this Health Potion as
-    - Small
-    - Normal
-    - Large
-  - These variants are themselves stored as Asset files and can be used in your Game
-- Now if you want to use a Particle Effect on your Health Potions, you only need to Add it to the Original Prefab
-  - This change would be added to the all the Variants of the prefabs
-  - This would also be added to all the instances of all the Prefabs
+- All of these items have the same logic just with different parameters. All of these can have multiple instances in multiple parts of the game
+
+Using prefab variants we can easily tackle this situation
+- Save a `HealthPotion` object as prefab
+- Create three prefab variants of this potion: `SmallHealthPotion`, `NormalHealthPotion` and `LargeHealthPotion`
+  - These variants themselves are stored as asset files and can be used in the game
+
+There is now a hierarchy. A change to `SmallHealthPotion` will be propagated to all instances of *that* variant. A change to `HealthPotion` will be propagated to all instances of *all* variants. If you want to add a sparkle effect on your health potions, you only need to add it to the original `HealthPotion` prefab.
 
 ### Bonus Content: Nested Prefabs
-Prefabs can also be nested inside other prefabs. These can be used for dividing the development process into smaller chunks.Lets take the example of an RPG game with enemy characters with weapons. The features of the game are:-
-- There are Enemy character which can be found in various places around the world.(Ex - Raider)
-- Each Enemy also has items such as
-  - Weapons (Ex-Sword, Shield, Axe)
-  - Armor (Ex-Helmet, Leather Armor)
-  - Other (Ex-Potion, Coins)
-- This type Equipment can also be used by other Enemies (Ex-Guard) or by the Player.
 
-Thus the prefabs that need to be created are :-
-  - Player
-  - Raider
-  - Guard 
-  - Sword
-  - Shield
-  - Axe
-  - Helmet
-  - Leather Armor
-  - Potion
-  - Coin
+Prefabs can also be nested inside other prefabs. These can be used for dividing the development process into smaller chunks. Let's take the example of an RPG game with enemy characters with weapons. The features of the game are
 
-These prefabs can be created individually during the development process and can be put together in the form of prefabs.
-These prefabs are finally assembled into Objects in context to the Game such as:-
+- There are enemy characters which can be found throughout the world (Ex - Raider)
+- Each enemy also has items such as
+  - Weapons (Ex - Sword, Shield, Axe)
+  - Armor (Ex - Helmet, Leather Armor)
+  - Other (Ex - Potions, Coins)
+- This equipment can also be used by other enemies (Ex - Guard) or by the player
+
+We'll create the following prefabs: 
+- Player
+- Raider
+- Guard
+- Sword
+- Shield
+- Axe
+- Helmet
+- Leather Armor
+- Potion
+- Coin
+
+These prefabs can be created individually during the development process and can be put together in the form of prefabs. They are finally assembled into objects in the context of the game such as
 
 ```
 Prefabs
 │   Coin
 │   Potion
-|   Leather Armor   
+|   Leather Armor
 |   Hemlet
 |   Axe
 |   Shield
@@ -201,17 +155,19 @@ Prefabs
     |   25 Coins
 ```
 
-### Bonus Content: Parent-Child Relationship
-As in the case of Nested prefabs we came to know that Objects and made child of Other Objects. This forms a parent-child relationship between objects. This involves interaction between the two Object i.e. Parent and Child.
-The Child inherits multiple properties from its parents such as:
+The Raider, Player and Guard prefabs use the same weapon and armor prefabs.
+
+#### Parent-Child Relationship
+
+When nesting prefabs, we have objects that contain other objects. This forms a parent-child relationship between these objects. The child inherits multiple properties from its parents such as
+
 - Position
 - Rotation
 - Scale
 - Colliders
 
-
 ### Refereneces
 
 1. [Prefabs - Unity Documentation](https://docs.unity3d.com/Manual/Prefabs.html)
 2. [Scenes - Godot Documentation](https://docs.godotengine.org/en/stable/getting_started/step_by_step/scenes_and_nodes.html)
-3. [Blueprint Class - Unreal Documentation](https://docs.unrealengine.com/en-US/ProgrammingAndScripting/Blueprints/index.html) 
+3. [Blueprint Class - Unreal Documentation](https://docs.unrealengine.com/en-US/ProgrammingAndScripting/Blueprints/index.html)
