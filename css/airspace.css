@@ -375,7 +375,7 @@ font header .navbar-default .navbar-nav li a:hover {
     background: linear-gradient(to left, #928dab, #1f1c2c 70%);
     opacity: 0.8;
 }
-#global-header .block {
+/* #global-header .block {
     color: #e3e3e4;
     margin: 0 auto;
     text-align: center;
@@ -392,7 +392,7 @@ font header .navbar-default .navbar-nav li a:hover {
     font-weight: 300;
     letter-spacing: 1px;
     word-spacing: 3px;
-}
+} */
 /*--
 	portfolio-work Start
 --*/
