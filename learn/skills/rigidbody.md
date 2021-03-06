@@ -59,6 +59,21 @@ class Paddle : KinematicBody {
 class Brick : StaticBody {}
 ```
 
+### Colliders
+
+One last thing that we have to consider while working with physics is the concept of a collider. We've been saying that the physics 
+system is incharge of collision calculations, but that would mean it would have to perform intersection calculations on shapes as 
+complex as highly detailed characters. From a performance point of view, that's going to be nightmare, considering most of the time 
+we don't really care about collisions that precise anyway.
+
+Enter colliders. We simply assign a simpler shape (collider) to the complex character, and that shape is what's used by the physics system. Choosing the right combination of colliders is important to make your game feel right. If your character's hands are not covered with a collider, they'll go through walls. If the "hit box" is too large, bullets will hit your character even when it looks like they shouldn't.
+
+![colliders.png](/img/learn/rigidbody_colliders.png)
+
+The above image illustrates a *compound* setup, that is, we're using multiple basic shapes (capsules, boxes) to create a collider 
+for the character. The green wireframe representation is what will be used by the physics system, and it is clear that this is much simpler than the actual character.
+
+
 ### Bonus Content: Game Loops
 
 ![Physics Engine Overview](/img/learn/physics_engine.png)
