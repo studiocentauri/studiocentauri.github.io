@@ -120,7 +120,7 @@ void FixedUpdate() {
 ### Bonus Content: Frame vs Physics Frame
 
 In the [rigidbodies](/learn/skills/rigidbody.html) article we mentioned the concept of a game loop, and also mentioned that engines 
-might have different implementattions. Unity is one such engine. In the above cases of `Transform` and `Rigidbody` manipulation we 
+might have different implementations. Unity is one such engine. In the above cases of `Transform` and `Rigidbody` manipulation we 
 used 2 different functions
 
 - `FixedUpdate` is for the loop that handles physics calculations. The duration of a frame here is *fixed*. For example, this function is guaranteed to be called 60 times per second
