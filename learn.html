@@ -3,16 +3,51 @@ layout: default
 permalink: /learn/
 ---
 
-<div class="container-fluid">
-  <div class="row align-items-center">
-    <div class="col p-0">
-      {% include character-select.html name="artist" %}
+<div class="container-fluid p-5">
+
+  <!-- Heading -->
+  <h1 class="text-uppercase text-center fw-bold">getting started.</h1>
+  <p class="text-center">
+    Choose the path that you're interested in. All three paths cover the same basics till the first live workshop and then diverge.
+  </p>
+
+  <div class="card-group">
+    
+    <!-- Artist -->
+    <div class="card">
+      <img src="https://source.unsplash.com/user/nasa/300x300" class="card-img-top" alt="...">
+      <div class="card-body p-4">
+        <h5 class="card-title text-uppercase fw-bold">art.</h5>
+        <p class="card-text">
+          Bring your vision to life through art and animation for games.
+        </p>
+        <a href="{{ site.baseurl }}/learn/artist.html" class="btn btn-dark text-uppercase fw-bold">start</a>
+      </div>
     </div>
-    <div class="col p-0">
-      {% include character-select.html name="designer" %}
+
+    <!-- Programmer -->
+    <div class="card">
+      <img src="https://source.unsplash.com/user/nasa/300x300" class="card-img-top" alt="...">
+      <div class="card-body p-4">
+        <h5 class="card-title text-uppercase fw-bold">code.</h5>
+        <p class="card-text">
+          Write code to implement games and delve into the technology powering them.
+        </p>
+        <a href="{{ site.baseurl }}/learn/programmer.html" class="btn btn-dark text-uppercase fw-bold">start</a>
+      </div>
     </div>
-    <div class="col p-0">
-      {% include character-select.html name="programmer" %}
+
+    <!-- Game Design -->
+    <div class="card">
+      <img src="https://source.unsplash.com/user/nasa/300x300" class="card-img-top" alt="...">
+      <div class="card-body p-4">
+        <h5 class="card-title text-uppercase fw-bold">game design.</h5>
+        <p class="card-text">
+          Develop a vision for your game and ensure consisten player experience.
+        </p>
+        <a href="{{ site.baseurl }}/learn/designer.html" class="btn btn-dark text-uppercase fw-bold">start</a>
+      </div>
     </div>
+
   </div>
 </div>
