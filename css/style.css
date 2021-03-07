@@ -169,3 +169,7 @@ div.character-bg {
 .zoom:hover {
   transform: scale(1.05);
 }
+
+.home-img {
+  height: 300px;
+}
