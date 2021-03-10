@@ -32,7 +32,7 @@ for a variety of different concepts.
 - **Blender (Video):** [BlenderGuru](https://www.youtube.com/playlist?list=PLjEaoINr3zgEq0u2MzVgAaHEBt--xLB6U)
 - **Unity (Video):** [Brackeys Beginner Series](https://www.youtube.com/playlist?list=PLPV2KyIb3jR5QFsefuO2RlAgWEz6EvVi6)
 - **Unity (Text):** [John Lemon's Haunted Jaunt](https://learn.unity.com/project/john-lemon-s-haunted-jaunt-3d-beginner)
-- **Godot (Video):** [HeartBeast's Basic Breakout](https://www.youtube.com/playlist?list=PL5ifSh_5JB7D8Q9OyfzGknmUWlk54trBT)
+- **Godot (Video):** [HeartBeast's Basic Breakout](https://www.youtube.com/playlist?list=PL9FzW-m48fn1iR6WL4mjXtGi8P4TaPIAp)
 - **Godot (Text):** [Your First Game](https://docs.godotengine.org/en/stable/getting_started/step_by_step/your_first_game.html)
 - **Unreal (Video):** [Battery Collector](https://www.youtube.com/playlist?list=PLZlv_N0_O1gYup-gvJtMsgJqnEB_dGiM4)
 - **Unreal (Text):** [UE4 for Beginners](https://www.raywenderlich.com/771-unreal-engine-4-tutorial-for-beginners-getting-started)
