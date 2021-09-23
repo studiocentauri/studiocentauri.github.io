@@ -4,6 +4,24 @@
  *
  */
  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+
+body {
+  background-color: #f8f9d2;
+  background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
 
 .italic {
   font-style: italic;
@@ -41,9 +59,26 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-h2{
+/*******************************************
+ * New Fonts
+ *******************************************/
+
+ h2{
   font-family: 'Montserrat', sans-serif;
 }
+
+section.p-5 p{
+  font-family: 'Oxygen', sans-serif;
+}
+
+h5{
+  font-family: 'DM Sans', sans-serif;
+}
+
+.btn{
+  font-family: 'DM Sans', sans-serif;
+}
+
 /*******************************************
  * Footer
  *******************************************/
@@ -90,13 +125,13 @@ div.skills-left-bg li {
   margin-bottom: 1em;
   font-size: 15px;
   color: #464646;
-  font-family: "Open Sans";
+  font-family: "Oxygen", sans-serif;
 }
 
 div.skills-left-bg p {
   margin-bottom: 2em;
   color: #464646;
-  font-family: "Open Sans";
+  font-family: "Oxygen", sans-serif;
 }
 
 div.skills-left-bg #back-button {
@@ -116,7 +151,7 @@ div.skills-right-bg {
 div.skills-right-bg p {
   margin-top: 4em;
   text-align: center;
-  font-family: "Open Sans";
+  font-family: "Oxygen", sans-serif;
 }
 
 img#kaka {
@@ -197,11 +232,40 @@ div.character-bg {
   section.p-5{
     padding:0!important;
   }
+  div.tree-node{
+    height:5em;
+    width:5em;
+  }
+  div.tree-node p{
+    font-size: 15px !important;
+  }
+  div.skills-bg {
+    padding: 0 !important;
+  }
+  div.p-2{
+    width:5em !important;
+    height:5em !important;
+  }
+  div.container-fluid{
+    padding: 0 !important;
+  }
+  div.skills-left-bg{
+    padding: 0 !important;
+  }
+  a#back-button{
+    position:relative;
+    top:20px;
+    left:20px;
+  }
   .home-img {
     object-fit: contain;
     max-width: 100%;
     max-height: 100%;
     width: auto;
     height: auto;
+  }
+ div.skills-left-bg > div{
+   position:relative;
+   left:-20px;
  }
 }
