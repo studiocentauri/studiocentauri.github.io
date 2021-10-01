@@ -210,6 +210,10 @@ div.character-bg {
 }
 
 .home-img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
   height: 300px;
 }
 
@@ -221,6 +225,13 @@ div.character-bg {
 .btn:focus {
   box-shadow: 0 0.8em 0.8em -0.4em black;
   transform: translateY(-0.25em);
+}
+
+@media only screen and (min-width: 580px) and (max-width: 1050px) {
+  .col-sm {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
 }
 
 @media only screen and (max-width: 580px) {
