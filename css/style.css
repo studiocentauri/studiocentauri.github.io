@@ -274,4 +274,11 @@ div.character-bg {
    position:relative;
    left:-20px;
  }
+ section#intro {
+  width:100%;
+  margin:inherit;
+ }
+ section#intro > div {
+  padding:1.5rem !important;
+ }
 }
