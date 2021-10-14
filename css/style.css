@@ -227,6 +227,47 @@ div.character-bg {
   transform: translateY(-0.25em);
 }
 
+.col{
+  display: flex;
+  flex-direction: column;
+}
+
+.nav{
+  flex-wrap: nowrap !important;
+}
+
+@media only screen and (max-width: 800px) {
+    .row{
+      flex-direction: column;
+    }
+    .justify-content-end {
+      justify-content: center !important;
+      align-items: center;
+    }
+    .social-icons{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+    }
+    .footer-text {
+      text-align: center;
+      align-self: center;
+    }
+} 
+
+@media only screen and (max-width: 400px) {
+  .nav{
+    flex-direction: column !important;
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  .social-icons{
+    flex-direction: column;
+  }
+}
+
 @media only screen and (min-width: 580px) and (max-width: 1050px) {
   .col-sm {
     padding-left: 5px !important;
