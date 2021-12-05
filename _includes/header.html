@@ -1,7 +1,22 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{{ site.baseurl }}/index.html" style="width: 2em;">
-      <img src="{{ site.baseurl }}/img/logo.png" alt="Logo" class="img-fluid">
-    </a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+ 
+  <a class="brand-name" href="{{ site.baseurl }}/index.html">GameDev_IITK</a>
+
+  <a class="navbar-brand" href="{{ site.baseurl }}/index.html" >
+    <img src="{{ site.baseurl }}/img/logo.png" alt="Logo" class="img-fluid">
+  </a>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" style="padding-right: 4px;"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-end text-white-50" id="main-navbar">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://studiocentauri.itch.io/">Projects</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/learn">Learn</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/blog">Blog</a></li>
   </div>
+
+
 </nav>

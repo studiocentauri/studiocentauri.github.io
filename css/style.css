@@ -232,8 +232,36 @@ div.character-bg {
   flex-direction: column;
 }
 
-.nav{
-  flex-wrap: nowrap !important;
+/******
+NAVBAR
+******/
+
+.navbar{
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.brand-name{
+  color: #ffffff;
+  line-height: 1.5;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  font-size: 1.125rem;
+}
+
+.navbar-brand{
+  position: absolute;
+  left: 49%;
+  display: block;
+  width: 2.5em;
+}
+
+.navbar-brand:hover{
+  width: 2.6em; 
+}
+
+.nav-link{
+  color: white !important;
 }
 
 @media only screen and (max-width: 800px) {
@@ -259,11 +287,6 @@ div.character-bg {
     }
 } 
 
-@media only screen and (max-width: 400px) {
-  .nav{
-    flex-direction: column !important;
-  }
-}
 
 @media only screen and (max-width: 200px) {
   .social-icons{
