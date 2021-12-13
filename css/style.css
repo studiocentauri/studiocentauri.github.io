@@ -232,6 +232,19 @@ div.character-bg {
   flex-direction: column;
 }
 
+.card-body {
+  position:relative;
+}
+
+.card-text {
+  padding-bottom:10px;
+}
+
+.btn-learn {
+  position:absolute;
+  bottom:10px;
+}
+
 /******
 NAVBAR
 ******/
