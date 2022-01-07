@@ -259,7 +259,8 @@ NAVBAR
   line-height: 1.5;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
+  min-width: 11rem;
 }
 
 .navbar-brand{
@@ -275,6 +276,24 @@ NAVBAR
 
 .nav-link{
   color: white !important;
+}
+
+.nav-link:hover{
+  color: black !important;
+}
+
+.nav-item{
+  display: flex;
+  justify-content: center;
+  width: 5rem;
+}
+
+.nav-item:hover{
+  background-color:  rgba(255, 255, 255, 0.5) !important;
+}
+
+.large-logo{
+  max-width: 7rem !important;
 }
 
 @media only screen and (max-width: 800px) {
