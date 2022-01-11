@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
  
-  <a class="brand-name" href="{{ site.baseurl }}/index.html">GameDev_IITK</a>
+  <a class="brand-name" href="{{ site.baseurl }}/index.html">Studio Centauri</a>
 
   <a class="navbar-brand" href="{{ site.baseurl }}/index.html" >
-    <img src="{{ site.baseurl }}/img/logo.png" alt="Logo" class="img-fluid">
+    <img src="{{ site.baseurl }}/img/logo.png" alt="Logo" class="img-fluid" id="upd-1">
   </a>
 
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" onclick="enlarge()" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon" style="padding-right: 4px;"></span>
   </button>
 
@@ -18,5 +18,19 @@
       <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/blog">Blog</a></li>
   </div>
 
+  <script>
+    let t = 0;
+    let elem = document.getElementById('upd-1');
+    function enlarge(){
+      if(t==0){
+        elem.classList.add("large-logo");
+        t = 1;
+      }
+      else{
+        elem.classList.remove("large-logo");
+        t = 0;
+      }
+    }
+  </script>
 
 </nav>
