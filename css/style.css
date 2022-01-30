@@ -99,7 +99,8 @@ div.skills-bg .container-fluid {
 }
 
 div.skills-bg .row {
-  margin: 2em 0;
+  margin:auto;
+  /* margin: 2em 0; */
 }
 
 div.skills-left-bg {
@@ -333,6 +334,16 @@ NAVBAR
   }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 800px) {
+  div.skills-left-bg > div{
+    position:relative;
+    left:-20px;
+  }
+  .skills-left-bg {
+    width:676px !important;
+  }
+}
+
 @media only screen and (max-width: 580px) {
   section.p-5{
     padding:0!important;
@@ -369,9 +380,14 @@ NAVBAR
     width: auto;
     height: auto;
   }
+  div.skills-bg {
+    position: relative;
+    top:75px;
+  }
  div.skills-left-bg > div{
    position:relative;
    left:-20px;
+   height: 125px;
  }
  section#intro {
   width:100%;
